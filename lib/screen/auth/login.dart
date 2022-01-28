@@ -40,7 +40,7 @@ class _LoginState extends State<Login> {
                     children: [
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 500,
+                        height: MediaQuery.of(context).size.height,
                         child: Column(
                           children: [
                             Center(
@@ -70,9 +70,15 @@ class _LoginState extends State<Login> {
                                         fontSize: 18,
                                       ),
                                       decoration: InputDecoration(
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.white),
+                                          borderRadius:
+                                              BorderRadius.circular(25.7),
+                                        ),
                                         border: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10.0),
+                                              BorderRadius.circular(25.7),
                                         ),
                                         hintText: 'Username',
                                         hintStyle: TextStyle(
@@ -100,9 +106,15 @@ class _LoginState extends State<Login> {
                                         fontSize: 18,
                                       ),
                                       decoration: InputDecoration(
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.white),
+                                          borderRadius:
+                                              BorderRadius.circular(25.7),
+                                        ),
                                         border: OutlineInputBorder(
                                           borderRadius:
-                                              BorderRadius.circular(10.0),
+                                              BorderRadius.circular(25.7),
                                         ),
                                         hintText: 'Password',
                                         hintStyle: TextStyle(
@@ -161,6 +173,43 @@ class _LoginState extends State<Login> {
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Container(
+                                          child: IconButton(
+                                              onPressed: null,
+                                              icon: Icon(
+                                                  FontAwesomeIcons.facebook,
+                                                  color: Kcolor.white,
+                                                  size: 40.0)),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Container(
+                                          child: IconButton(
+                                              onPressed: null,
+                                              icon: Icon(
+                                                  FontAwesomeIcons.googlePlus,
+                                                  color: Kcolor.white,
+                                                  size: 40.0)),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(5.0),
+                                        child: Container(
+                                          child: IconButton(
+                                              onPressed: null,
+                                              icon: Icon(
+                                                  FontAwesomeIcons.twitter,
+                                                  color: Kcolor.white,
+                                                  size: 40.0)),
+                                        ),
+                                      ),
+                                    ],
+                                  )
                                 ],
                               ),
                             ),
